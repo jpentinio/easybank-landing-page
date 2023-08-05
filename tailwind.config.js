@@ -15,6 +15,15 @@ export default {
         "intro-desktop": "url('/src/assets/images/bg-intro-desktop.svg')",
         mockups: "url('/src/assets/images/image-mockups.png')",
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(10px)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 3s infinite ease alternate",
+      },
     },
   },
   plugins: [],

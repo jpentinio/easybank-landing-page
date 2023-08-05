@@ -13,7 +13,7 @@ const Navbar = () => {
           <a
             href="#"
             key={index}
-            className="flex items-center h-20 border-b-4 border-white text-grayish-blue hover:border-lime-green hover:text-dark-blue"
+            className="flex items-center h-20 border-b-4 border-white text-grayish-blue hover:border-lime-green hover:text-dark-blue transition-all ease-linear duration-200"
           >
             {link}
           </a>
