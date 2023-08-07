@@ -13,7 +13,7 @@ export default {
       },
       backgroundImage: {
         "intro-desktop": "url('/src/assets/images/bg-intro-desktop.svg')",
-        mockups: "url('/src/assets/images/image-mockups.png')",
+        "intro-mobile": "url('/src/assets/images/bg-intro-mobile.svg')",
       },
       keyframes: {
         wiggle: {

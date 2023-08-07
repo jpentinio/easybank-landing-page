@@ -6,51 +6,65 @@ import { articles, items } from "../constants/constants";
 const LandingPage = () => {
   return (
     <div className="relative overflow-hidden">
-      <div className=" grid grid-cols-3 h-[95vh] pl-44 bg-very-light-gray gap-8">
-        <div className="flex flex-col justify-center gap-10">
-          <div className="text-6xl text-dark-blue leading-tight font-light">
+      <div className="flex h-96 scale-[1.5] md:scale-[2.5] lg:hidden bg-intro-mobile bg-no-repeat bg-center"></div>
+      <div className="grid lg:grid-cols-3 lg:h-[95vh] lg:pl-44 bg-very-light-gray lg:gap-8">
+        <div className="items-center lg:items-start text-center lg:text-left flex flex-col justify-center py-16 px-6 md:px-12 md:pt-60 lg:p-0 gap-6 sm:gap-10">
+          <div className="text-4xl sm:text-6xl text-dark-blue leading-tight font-light">
             Next generation digital banking
           </div>
-          <div className="text-grayish-blue text-lg">
+          <div className="text-grayish-blue text-md sm:text-lg">
             Take your financial life online. Your Easybank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </div>
           <Button text="Request invite" />
         </div>
-        <div className="col-span-2 bg-intro-desktop bg-no-repeat bg-left-bottom scale-1 translate-y-[-50px]"></div>
+        <div className="hidden sm:flex col-span-2 sm:bg-intro-desktop bg-no-repeat sm:bg-left-bottom scale-1 translate-y-[-50px]"></div>
       </div>
       <img
         src={mockups}
         alt=""
-        className="w-fit h-[125vh] object-contain absolute right-[-120px] top-[-100px] animate-wiggle"
+        className="w-full lg:w-fit h-auto md:h-[60vh] lg:h-[125vh] object-contain absolute lg:right-[-120px] top-[-100px] animate-wiggle"
       />
-      <div className="px-44 h-screen bg-light-grayish-blue flex flex-col justify-center gap-24">
+      <div className="text-center lg:text-left py-14 px-6 md:px-24 lg:px-44 lg:py-0 lg:h-screen bg-light-grayish-blue flex flex-col justify-center gap-24">
         <div>
-          <div className="text-dark-blue text-5xl">Why choose Easybank?</div>
-          <div className="text-grayish-blue text-lg mt-10">
+          <div className="text-dark-blue text-3xl sm:text-5xl">
+            Why choose Easybank?
+          </div>
+          <div className="text-grayish-blue text-sm sm:text-lg mt-4 lg:mt-10">
             We leverage Open Banking to turn your bank account into your
             financial hub. <br />
             Control your finances like never before.
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-12">
+        <div className="grid lg:grid-cols-4 gap-12">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col justify-between gap-8">
-              <img src={item.icon} alt="icon" className="w-24 h-24" />
-              <div className="text-3xl text-dark-blue">{item.title}</div>
-              <div className="text-lg text-grayish-blue">
+            <div
+              key={index}
+              className="items-center lg:items-start text-center lg:text-left flex flex-col justify-between gap-8"
+            >
+              <img
+                src={item.icon}
+                alt="icon"
+                className="w-20 h-20 sm:w-24 sm:h-24"
+              />
+              <div className="text-xl sm:text-3xl text-dark-blue">
+                {item.title}
+              </div>
+              <div className="text-sm sm:text-lg text-grayish-blue">
                 {item.description}
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="px-44 h-screen bg-white flex flex-col justify-center gap-20">
+      <div className="px-6 py-10 lg:px-44 lg:h-screen bg-white flex flex-col justify-center gap-20">
         <div>
-          <div className="text-dark-blue text-5xl">Latest Articles</div>
+          <div className="text-center lg:text-left text-dark-blue text-3xl sm:text-5xl">
+            Latest Articles
+          </div>
         </div>
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {articles.map((item, index) => (
             <div
               key={index}
