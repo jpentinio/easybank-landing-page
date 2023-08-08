@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <LandingPage />
       <Footer />
-      <div className="flex justify-center gap-1 p-2 text-sm">
+      <div className="text-center sm:flex sm:flex-row justify-center gap-1 p-2 text-sm">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io/home"
